@@ -1,24 +1,20 @@
-package com.ProjectPhase1.sys;
+package phase1Project;
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 public class Project {
 	public static void main(String args[]) {
 		String path ="/home/deepakgupta2mph/Downloads/SImplilearn/";
 		
 		Scanner sc = new Scanner(System.in);
 		ArrayList<String> l = new ArrayList<>();
-	
 		while(true) {
-			
 			System.out.println("Enter 1 for DISPLAY the existing list\n "
 					+ "Enter 2 for ADD/CREATE file\n"
 					+ "Enter 3 for DELETE file\n"
 					+ "Enter 4 for SEARCH file\n"
 					+ "Enter 5 for EXIT from loop ");
-			System.out.println();
 			int c= sc.nextInt();
 			switch(c) {
 			case 1:
@@ -29,7 +25,6 @@ public class Project {
 				for(File ff:filename) {
 					System.out.println(ff);
 				}
-				System.out.println();
 
 				break;
 				}
@@ -38,7 +33,7 @@ public class Project {
 				while(true) {
 					System.out.println("enter the file name to create");
 					String filename=sc.next();
-					String finalname=filename;
+					String finalname=path+filename;
 					System.out.println(finalname);
 
 					//create a file 
@@ -74,7 +69,6 @@ public class Project {
 					break;
 					
 				}
-				System.out.println();
 				break;
 			case 4: //search file
 				while(true) {
